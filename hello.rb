@@ -1,5 +1,1 @@
-# hello.rb
-
-"hello world"
-
-Time.now
+Time.now.to_s
