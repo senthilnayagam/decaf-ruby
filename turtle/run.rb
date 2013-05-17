@@ -1,4 +1,15 @@
 
+def load_multiple(baseurl,files)
+
+files.each do |file|
+  url =  baseurl + file
+  console.log('loading: ' + url)
+  remote_require(url)
+end
+
+
+end
+
 def log(message)
 console.log(message)
 end  
@@ -22,6 +33,17 @@ d =document.create_element 'script'
 d.type = 'text/ruby'
 d.src = url
 doc = document.head.append_child(d)  
+end
+
+def remote_require(url)
+d =document.create_element 'script'
+d.type = 'text/ruby'
+d.src = url
+doc = document.head.append_child(d)  
+end
+
+def rr(url)
+remote_require(url)
 end
 
 
