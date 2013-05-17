@@ -1,13 +1,10 @@
 
 def load_multiple(baseurl,files)
-
-files.each do |file|
-  url =  baseurl + file
-  console.log('loading: ' + url)
-  remote_require(url)
-end
-
-
+  files.each do |file|
+    url =  baseurl + file
+    console.log('loading: ' + url)
+    remote_require(url)
+  end
 end
 
 def log(message)
