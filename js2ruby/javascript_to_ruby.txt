@@ -1,0 +1,24 @@
+most examples of dom manipulation, canvas, SVG, AJAX are all in javascript so I need a script to help me port to ruby
+
+
+
+steps
+a) replace js comments with ruby comments
+
+b) convert camelcase to underscore
+
+def underscore
+  return downcase if match(/\A[A-Z]+\z/)
+  gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2').
+  gsub(/([a-z])([A-Z])/, '\1_\2').
+  downcase
+end
+
+c) remove var declarations
+
+
+hope this is a good start for those huge library manual conversions
+
+usage: 
+
+senthil$ cat fabric_all.js | ruby js2rb.rb  >test.rb
