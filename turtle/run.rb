@@ -13,3 +13,12 @@ d.type = 'text/ruby'
 d.src = url
 doc = document.head.append_child(d)  
 end
+
+
+def create_canvas(name,width,height)
+  c = document.create_element('canvas')
+c.id = name
+c.width = width
+c.height = height
+c
+end  
