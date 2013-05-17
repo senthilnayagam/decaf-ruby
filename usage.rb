@@ -17,4 +17,4 @@ d.type = 'text/ruby'
 d.src = 'https://raw.github.com/senthilnayagam/decaf-ruby/master/hello.rb'
 
 
-doc = document.get_elements_by_tag_name('head').appendChild(script)
+doc = document.get_elements_by_tag_name('head').appendChild(d)
