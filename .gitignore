@@ -16,3 +16,6 @@ tmp
 .yardoc
 _yardoc
 doc/
+js2ruby/fabric_all.js
+js2ruby/test.rb
+turtle/backup/*
