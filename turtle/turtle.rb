@@ -14,9 +14,9 @@ class Turtle
   HOME_X = CANVAS_WIDTH / 2
   HOME_Y = CANVAS_HEIGHT / 2
   COLORS = %w{red blue green white cyan pink yellow}
-  #DEG = Math::PI / 180.0
-  PI = 3.14159265359
-DEG =   PI/180.0
+  DEG = Math::PI / 180.0
+  #PI = 3.14159265359
+DEG =   Math::PI/180.0
 
 
   attr_accessor :heading, :x, :y
@@ -35,9 +35,9 @@ DEG =   PI/180.0
 
   def self.canvas
 
-=begin
-    return @canvas if @canvas
 
+    return @canvas if @canvas
+=begin
     root = TkRoot.new(:title => 'trtl', :minsize => [CANVAS_WIDTH, CANVAS_HEIGHT])
     @canvas = TkCanvas.new(root, :bg => 'black', :highlightthickness => 0, :width => CANVAS_WIDTH, :height => CANVAS_HEIGHT)
     @canvas.pack(:fill => 'both', :expand => 1)
@@ -105,7 +105,7 @@ DEG =   PI/180.0
 
   # TODO / TOFIX: This is horribly wrong with the fewer steps due to circumference varying ;-)
   def circle(radius, extent = 360, steps = 360)
-    circumference = (PI * 2 * radius) * (extent / 360.0)
+    circumference = (Math::PI * 2 * radius) * (extent / 360.0)
     steps.times do
       left extent / steps.to_f
       forward circumference / steps.to_f
