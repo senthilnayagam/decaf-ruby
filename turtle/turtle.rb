@@ -190,3 +190,7 @@ end
 
 include InteractiveTurtle if %w{irb pry}.include?($0)
 =end
+
+
+
+console.log('turtle loaded')
